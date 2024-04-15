@@ -1,0 +1,19 @@
+@startuml
+title Diagrama de Secuencia - Proceso de Análisis y Diagnóstico de veterinaria
+
+actor "Veterinario/Laboratorista" as Veterinario
+participant "Sistema" as Sistema
+
+Veterinario -> Sistema: Realizar análisis y diagnóstico
+activate Sistema
+
+Sistema -> Sistema: Buscar valores de referencia
+Sistema -> Sistema: Detectar anomalías
+Sistema -> Sistema: Asistir en el diagnóstico
+Sistema -> Sistema: Registrar resultados
+Sistema -> Sistema: Visualizar historial
+Sistema -> Sistema: Generar informe
+
+Sistema --> Veterinario: Entregar resultados
+deactivate Sistema
+@enduml
