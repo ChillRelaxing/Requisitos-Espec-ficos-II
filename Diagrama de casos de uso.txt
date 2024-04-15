@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+
+actor "Veterinario/Laboratorista" as Veterinario
+actor "Sistema" as Sistema
+
+rectangle "Proceso de Análisis y Diagnóstico de veterinaria" {
+  usecase "Buscar valores de referencia" as Buscar
+  usecase "Detectar anomalías" as Detectar
+  usecase "Asistir en el diagnóstico" as Asistir
+  usecase "Registrar resultados" as Registrar
+  usecase "Visualizar historial" as Visualizar
+  usecase "Generar informe" as Informe
+}
+
+Veterinario --> Buscar
+Veterinario --> Detectar
+Veterinario --> Asistir
+Veterinario --> Registrar
+Veterinario --> Visualizar
+Veterinario --> Informe
+
+Buscar --> Sistema
+Detectar --> Sistema
+Asistir --> Sistema
+Registrar --> Sistema
+Visualizar --> Sistema
+Informe --> Sistema
+
+@enduml
